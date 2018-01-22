@@ -4,9 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>NEXDEX - Next Generation Decentralized Crypto Exchange</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="stylesheets/screen.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -27,13 +29,15 @@
 
             <div id="container">
                 
-                <div class="menu-bar">
+                <div class="header-bar">
                     <div class="inner">
                         <table style="width: 100%;" border="0">
                             <tr>
-                                <td class="menu-bar-col-1">
-                                    <img src="./img/nexdex_logo.png" class="logo" />
-                                    
+                                <td class="header-bar-col-1">
+                                    <a href="#home" data-href="home">
+                                        <img src="./img/nexdex_logo.png" class="logo" />
+                                    </a>
+
                                     <button type="button" class="btn btn-primary clearfix hidden">
                                         <div class="button-text">
                                             GJC
@@ -42,16 +46,33 @@
                                     </button>
 
                                 </td>
-                                <td class="menu-bar-col-2">
+                                <td class="header-bar-col-2">
                                     <a href="#" class="menu-icon">
-                                        <div class="menu-board"></div>
-                                        <div class="menu-board"></div>
-                                        <div class="menu-board"></div>
+                                        <div class="menu-icon-board"></div>
+                                        <div class="menu-icon-board"></div>
+                                        <div class="menu-icon-board"></div>
                                     </a>
                                 </td>
                             </tr>
                         </table>
                     </div>
+                </div>
+
+                <div class="header-spacer"></div>
+
+                <div class="menu-container hidden">
+
+                    <div class="menu">
+                        <a href="#home" class="menu-item" data-href="home">Home <span class="glyphicon arrow">&#xe080;</span></a>
+                        <a href="#start" class="menu-item" data-href="start">Start <span class="glyphicon arrow">&#xe080;</span></a>
+                        <a href="#exchange" class="menu-item" data-href="exchange">Exchange <span class="glyphicon arrow">&#xe080;</span></a>
+                        <a href="#manage-accounts" class="menu-item" data-href="manage-accounts">Manage Accounts <span class="glyphicon arrow">&#xe080;</span></a>
+                        <a href="#deposit-withdraw" class="menu-item" data-href="deposit-withdraw">Deposit / Withdraw <span class="glyphicon arrow">&#xe080;</span></a>
+                        <a href="#" class="menu-item">How to <span class="glyphicon arrow">&#xe080;</span></a>
+                        <a href="#" class="menu-item">FAQ <span class="glyphicon arrow">&#xe080;</span></a>
+                        <a href="#" class="menu-item">Fees <span class="glyphicon arrow">&#xe080;</span></a>
+                    </div>
+
                 </div>
 
                 <div class="active-account-container">
@@ -60,44 +81,48 @@
                             <div class="col col-8">
                                 Active Account
                                 <div class="address">
-                                     0xb1b388...&nbsp;&nbsp;<a href="#">Manage Accounts</a>
+                                     0xb1b388...&nbsp;&nbsp;<a href="#manage-accounts" data-href="manage-accounts">Manage Accounts</a>
                                 </div>
                             </div>
                             <div class="col col-4">
-                                Balance
+                                Wallet Balance
                                 <div>
-                                    <div><div class="btn btn-success btn-sm balance"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div></div>
+                                    <div><div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="manage-accounts" class="content">
+                <div id="home" class="content-element" style="display: block;">
 
-                    <div class="account-container">
-                        <div class="account">
+                    <div class="homepage">
 
-                            <h2>Manage Accounts</h2>
-                            <div></div>
-                            <div class="account-row">
-                                <b>Address</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)
-                                <div class="address">
-                                    0xb1b388a6fe28d9d4102cdb403947d3831cd4a3e3
-                                </div>
-                                <div class="wallet-balance">
-                                    <div>
-                                        <div><div class="btn btn-success btn-sm balance"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
+                        <div class="h1-box">
+                            <h1>
+                                New Generation of<br />Decentralized Crypto Exchange 
+                            </h1>
                         </div>
+
+                        <div class="button-box">
+                            <a href="#" data-href="start" class="btn btn-primary">
+                                Get Started
+                            </a>
+                        </div>
+
+                        <div class="bullet-box">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+
                     </div>
 
                 </div>
 
-                <div id="start" class="content">
+                <div id="start" class="content-element">
 
                     <div class="new-container">
                         <div class="new">
@@ -105,18 +130,20 @@
                             <h2>Welcome</h2>
                             <div>Please select an option</div>
                             <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action">Create new account</a>
-                                <a href="#" class="list-group-item list-group-item-action">Import existing account using Private Key</a>
+                                <a href="#" data-href="new-account" class="list-group-item list-group-item-action">Create new account</a>
+                                <a href="#" data-href="import-account" class="list-group-item list-group-item-action">Import existing account using Private Key</a>
                                 <a href="#" class="list-group-item list-group-item-action">Import existing account using MetaMask</a>
                             </div>
+
                         </div>
                     </div>
 
+                </div>
+
+                <div id="new-account" class="content-element">
+
                     <div class="new-container">
                         <div class="new">
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
 
                             <h2>New Account Created</h2>
                             <div class="text">Please copy and save both your <b>Address</b> and <b>Private Key</b></div>
@@ -132,29 +159,30 @@
 
                             <div class="buttons clearfix">
                                 <div>
-                                    <button class="btn btn-link">
+                                    <a href="#" data-href="start" class="btn btn-link">
                                         <span class="glyphicon">&#xe079;</span> Back
-                                    </button>
+                                    </a>
                                 </div>
 
                                 <div>
-                                    <button class="btn btn-primary">
+                                    <a href="#" data-href="new-deposit" class="btn btn-primary">
                                         I saved it <span class="glyphicon">&#xe080;</span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
+                </div>
+
+                <div id="new-deposit" class="content-element">
+
                     <div class="new-container">
                         <div class="new">
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
 
                             <h2>Deposit ETH</h2>
-                            <div class="text">Deposit ETH to your NEXDEX Wallet</div>
+                            <div class="text">Deposit ETH to your NEXDEX Wallet (<a href="#">How to get ETH? <span class="glyphicon">&#xe086;</span></a>)</div>
 
                             <div class="clearfix deposit">
                                 <div class="input-group mb-3">
@@ -168,26 +196,27 @@
 
                             <div class="buttons clearfix">
                                 <div>
-                                    <button class="btn btn-link">
+                                    <a href="#" data-href="new-account" class="btn btn-link">
                                         <span class="glyphicon">&#xe079;</span> Back
-                                    </button>
+                                    </a>
                                 </div>
 
                                 <div>
-                                    <button class="btn btn-primary">
-                                        Next step <span class="glyphicon">&#xe080;</span>
-                                    </button>
+                                    <a href="#" data-href="exchange" class="btn btn-primary">
+                                        Exchange Crypto <span class="glyphicon">&#xe080;</span>
+                                    </a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
+                </div>
+
+                <div id="import-account" class="content-element">
+
                     <div class="new-container">
                         <div class="new">
-                            <div class="progress" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
 
                             <h2>Import Account</h2>
                             <div class="text">Please type your <b>Private Key</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)</div>
@@ -209,105 +238,392 @@
 
                 </div>
 
-                <div id="trade" class="content">
+                <div id="manage-accounts" class="content-element">
 
-                    <div class="row account-controls">
+                    <div class="account-container">
+                        <div class="account">
 
-                        <div class="main-col col-12 col-xl-3">
-                            <div class="box">
-                                <div class="exchange-balance">
-                                    <h3>Exchange Balance</h3>
-                                    <div class="row">
-                                        <div class="col"><div class="btn btn-success balance"><span class="badge badge-light">GJC</span> <span class="number">0.06972</span></div></div>
-                                        <div class="col"><div class="btn btn-success balance"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div></div>
+                            <h2>Manage Accounts</h2>
+
+                            <div class="account-row">
+                                <div class="wallet-balance clearfix">
+                                    <div class="cols cols-1">
+                                        <b>Wallet Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a>
+                                        <div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                    </div>
+                                    <div class="cols cols-2">
+                                        <b>Exchange Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a>
+                                        <div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
                                     </div>
                                 </div>
+                                <b>Address</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)
+                                <div class="address">
+                                    0xb1b388a6fe28d9d4102cdb403947d3831cd4a3e3
+                                </div>
+                                <b>Private Key</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)
+                                <div class="private-key">
+                                    <a href="#">Show Private Key&nbsp;&nbsp;<span class="glyphicon">&#xe105;</span></a>
+                                    <div class="hidden" data-visibility="0">a0c1c9f8e227783bb925ffcc8c36ac72705738869316841c1d236b902ac23f9c</div>
+                                </div>
+                                <div class="button-container">
+                                    <button class="btn btn-primary">
+                                        Switch to account
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="account-row">
+                                <div class="wallet-balance clearfix">
+                                    <div class="cols cols-1">
+                                        <b>Wallet Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a>
+                                        <div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                    </div>
+                                    <div class="cols cols-2">
+                                        <b>Exchange Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a>
+                                        <div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                    </div>
+                                </div>
+                                <b>Address</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)
+                                <div class="address">
+                                    0xb1b388a6fe28d9d4102cdb403947d3831cd4a3e3
+                                </div>
+                                <b>Private Key</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)
+                                <div class="private-key">
+                                    <a href="#">Show Private Key&nbsp;&nbsp;<span class="glyphicon">&#xe105;</span></a>
+                                    <div class="hidden" data-visibility="0">a0c1c9f8e227783bb925ffcc8c36ac72705738869316841c1d236b902ac23f9c</div>
+                                </div>
+                                <div class="button-container">
+                                    <button class="btn btn-primary">
+                                        Switch to account
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="account-row">
+                                <div class="wallet-balance clearfix">
+                                    <div class="cols cols-1">
+                                        <b>Wallet Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a>
+                                        <div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                    </div>
+                                    <div class="cols cols-2">
+                                        <b>Exchange Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a>
+                                        <div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                    </div>
+                                </div>
+                                <b>Address</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)
+                                <div class="address">
+                                    0xb1b388a6fe28d9d4102cdb403947d3831cd4a3e3
+                                </div>
+                                <b>Private Key</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)
+                                <div class="private-key">
+                                    <a href="#">Show Private Key&nbsp;&nbsp;<span class="glyphicon">&#xe105;</span></a>
+                                    <div class="hidden" data-visibility="0">a0c1c9f8e227783bb925ffcc8c36ac72705738869316841c1d236b902ac23f9c</div>
+                                </div>
+                                <div class="button-container">
+                                    <button class="btn btn-primary">
+                                        Switch to account
+                                    </button>
+                                </div>
+                            </div>
 
-                                <div class="wallet-balance">
-                                    <h3>Wallet Balance</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="deposit-withdraw" class="content-element">
+
+                    <div class="deposit-withdraw-container">
+                        <div class="deposit-withdraw">
+                            <h2>Deposit / Withdraw ETH</h2>
+                            <div class="box">
+                                <div class="exchange-balance">
                                     <div class="row">
-                                        <div class="col"><div class="btn btn-success btn-sm balance"><span class="badge badge-light">GJC</span> <span class="number">0.06972</span></div></div>
-                                        <div class="col"><div class="btn btn-success btn-sm balance"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div></div>
+                                        <div class="col first-col">
+                                            <div class="inner"><b>Exchange Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a></div>
+                                            <div class="btn btn-success balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                        </div>
+                                        <div class="col second-col">
+                                            <div class="inner"><b>Wallet Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a></div>
+                                            <div class="btn btn-success balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="box">
                                 <div class="deposit">
-                                    <h3>Deposit</h3>
-                                    <div class="clearfix">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">ETH</span>
+                                    <a href="#" class="toggle-heading">
+                                        Deposit
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="inner">Deposit ETH from your Ethereum Wallet to your Exchange Wallet (<a href="#">What does it mean? <span class="glyphicon">&#xe086;</span></a>)</div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">ETH</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
+                                            <button class="btn btn-primary" type="button">Deposit <span class="badge badge-light">ETH</span></button>
                                         </div>
-                                        <button class="btn btn-primary" type="button">Deposit <span class="badge badge-light">ETH</span></button>
-                                    </div>
-
-                                    <div class="clearfix">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">GJC</span>
-                                            </div>
-                                            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
-                                        </div>
-                                        <button class="btn btn-primary" type="button">Deposit <span class="badge badge-light">GJC</span></button>
                                     </div> 
                                 </div>
                             </div>
 
                             <div class="box">
                                 <div class="withdraw">
-                                    <h3>Withdraw</h3>
-                                    <div class="clearfix">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">ETH</span>
+                                    <a href="#" class="toggle-heading">
+                                        Withdraw
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="inner">Withdraw ETH from your Exchange Wallet to your Ethereum Wallet (<a href="#">What does it mean? <span class="glyphicon">&#xe086;</span></a>)</div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">ETH</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
+                                            <button class="btn btn-primary" type="button">Widthdraw <span class="badge badge-light">ETH</span></button>
                                         </div>
-                                        <button class="btn btn-primary" type="button">Widthdraw <span class="badge badge-light">ETH</span></button>
                                     </div>
-
-                                    <div class="clearfix">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">GJC</span>
-                                            </div>
-                                            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
-                                        </div>
-                                        <button class="btn btn-primary" type="button">Widthdraw <span class="badge badge-light">GJC</span></button>
-                                    </div> 
                                 </div>
                             </div>
 
                             <div class="box">
                                 <div class="transfer">
-                                    <h3>Transfer</h3>
-
-                                    <div class="clearfix">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">ETH</span>
+                                    <a href="#" class="toggle-heading">
+                                        Transfer
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="inner">Transfer ETH from your Exchange Wallet to another Ethereum Wallet (<a href="#">What does it mean? <span class="glyphicon">&#xe086;</span></a>)</div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">ETH</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="button">Transfer <span class="badge badge-light">ETH</span></button>
+                                                </div>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="button">Transfer <span class="badge badge-light">ETH</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deposit-withdraw-container second-container">
+                        <div class="deposit-withdraw">
+                            <h2>Deposit / Withdraw Currency</h2>
+                            <div class="box">
+                                <div class="exchange-balance">
+                                    <div class="row">
+                                        <div class="col first-col">
+                                            <div class="inner"><b>Exchange Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a></div>
+                                            <div class="btn btn-success balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                        </div>
+                                        <div class="col second-col">
+                                            <div class="inner"><b>Wallet Balance</b> <a href="#"><span class="glyphicon">&#xe086;</span></a></div>
+                                            <div class="btn btn-success balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="deposit">
+                                    <a href="#" class="toggle-heading">
+                                        Deposit
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="inner">Deposit ETH from your Ethereum Wallet to your Exchange Wallet (<a href="#">What does it mean? <span class="glyphicon">&#xe086;</span></a>)</div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">ETH</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
+                                            </div>
+                                            <button class="btn btn-primary" type="button">Deposit <span class="badge badge-light">ETH</span></button>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="withdraw">
+                                    <a href="#" class="toggle-heading">
+                                        Withdraw
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="inner">Withdraw ETH from your Exchange Wallet to your Ethereum Wallet (<a href="#">What does it mean? <span class="glyphicon">&#xe086;</span></a>)</div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">ETH</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
+                                            </div>
+                                            <button class="btn btn-primary" type="button">Widthdraw <span class="badge badge-light">ETH</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="transfer">
+                                    <a href="#" class="toggle-heading">
+                                        Transfer
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="inner">Transfer ETH from your Exchange Wallet to another Ethereum Wallet (<a href="#">What does it mean? <span class="glyphicon">&#xe086;</span></a>)</div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">ETH</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="button">Transfer <span class="badge badge-light">ETH</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="exchange" class="content-element">
+
+                    <div class="row account-controls">
+
+                        <div class="main-col col-12 col-xl-3">
+                            <div class="box">
+                                <div class="exchange-balance">
+                                    <h3><b>Exchange Balance</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)</h3>
+                                    <div class="row">
+                                        <div class="col"><div class="btn btn-success balance balance-success"><span class="badge badge-light">GJC</span> <span class="number">0.06972</span></div></div>
+                                        <div class="col"><div class="btn btn-success balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div></div>
+                                    </div>
+                                </div>
+
+                                <div class="wallet-balance">
+                                    <h3><b>Wallet Balance</b> (<a href="#">What is it? <span class="glyphicon">&#xe086;</span></a>)</h3>
+                                    <div class="row">
+                                        <div class="col"><div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">GJC</span> <span class="number">0.06972</span></div></div>
+                                        <div class="col"><div class="btn btn-success btn-sm balance balance-success"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="buy-sell">
+                                    <a href="#" class="toggle-heading">
+                                        Buy
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">GJC</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Buy amount" aria-label="Buy amount" aria-describedby="basic-addon1">
+                                            </div>
+                                            <button class="btn btn-primary" type="button">Buy <span class="badge badge-light">GJC</span></button>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="row">
+                                                <div class="cols col-first">
+                                                    <div class="title">Price / GJC</div>
+                                                </div>
+                                                <div class="cols col-second">
+                                                    <div class="btn btn-info btn-sm balance balance-info"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="row alternate">
+                                                <div class="cols col-first">
+                                                    <div class="title">Fee</div>
+                                                </div>
+                                                <div class="cols col-second">
+                                                    <div class="btn btn-info btn-sm balance balance-info"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="cols col-first">
+                                                    <div class="title">ETH (Total)</div>
+                                                </div>
+                                                <div class="cols col-second">
+                                                    <div class="btn btn-info btn-sm balance balance-info"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div> 
+                                </div>
+                            </div>
 
-                                    <div class="clearfix">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">GJC</span>
+                            <div class="box">
+                                <div class="buy-sell">
+                                    <a href="#" class="toggle-heading">
+                                        Sell
+                                        <span class="glyphicon arrow arrow-open">&#xe114;</span>
+                                        <span class="glyphicon arrow arrow-close hidden">&#xe113;</span>
+                                    </a>
+                                    <div class="hidden" data-visibility="0">
+                                        <div class="clearfix">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">GJC</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Sell amount" aria-label="Sell amount" aria-describedby="basic-addon1">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Address" aria-label="Address" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Amount" aria-label="Amount" aria-describedby="basic-addon1">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="button">Transfer <span class="badge badge-light">GJC</span></button>
+                                            <button class="btn btn-primary" type="button">Sell <span class="badge badge-light">GJC</span></button>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="row">
+                                                <div class="cols col-first">
+                                                    <div class="title">Price / GJC</div>
+                                                </div>
+                                                <div class="cols col-second">
+                                                    <div class="btn btn-info btn-sm balance balance-info"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="row alternate">
+                                                <div class="cols col-first">
+                                                    <div class="title">Fee</div>
+                                                </div>
+                                                <div class="cols col-second">
+                                                    <div class="btn btn-info btn-sm balance balance-info"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="cols col-first">
+                                                    <div class="title">ETH (Total)</div>
+                                                </div>
+                                                <div class="cols col-second">
+                                                    <div class="btn btn-info btn-sm balance balance-info"><span class="badge badge-light">ETH</span> <span class="number">1.23456</span></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div> 
@@ -315,12 +631,48 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-xl-6">
-                            Order Book
+                        <div class="main-col col-12 col-xl-6">
+                            <div class="charts">
+                                <div id="curve_chart" style="width: 100%; height: 500px;"></div>
+                            </div>
                         </div>
 
-                        <div class="col-12 col-xl-3">
-                            Trades
+                        <div class="main-col col-12 col-xl-3">
+                            <div class="order-book clearfix">
+
+                                <div class="row">
+                                    <div class="sell col-12 col-sm-6">
+
+                                        <div class="row">
+                                            <div class="col-6 colmn-1 heading">Sell<br /><b>ETH</b></div>
+                                            <div class="col-3 colmn-2 heading">Amount<br /><b>ETH</b></div>
+                                            <div class="col-3 colmn-3 heading">Value<br /><b>ETH</b></div>
+                                        </div>
+
+                                        <div class="row entry-row">
+                                            <div class="col-6 entry colmn-1">0.000153648</div>
+                                            <div class="col-3 entry colmn-2">16000.00</div>
+                                            <div class="col-3 entry colmn-3">0.469</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="buy col-12 col-sm-6">
+
+                                        <div class="row">
+                                            <div class="col-6 colmn-1 heading">Buy<br /><b>ETH</b></div>
+                                            <div class="col-3 colmn-2 heading">Amount<br /><b>ETH</b></div>
+                                            <div class="col-3 colmn-3 heading">Value<br /><b>ETH</b></div>
+                                        </div>
+
+                                        <div class="row entry-row">
+                                            <div class="col-6 entry colmn-1">0.000153648</div>
+                                            <div class="col-3 entry colmn-2">16000.00</div>
+                                            <div class="col-3 entry colmn-3">0.469</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>
