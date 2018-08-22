@@ -1,4 +1,5 @@
-var website = 'http://localhost:8080/www/crypto-exchange/index.html';
+var website = 'http://amis-erc20.github.io/ethexchange/index.html';
+// var website = 'http://localhost:8080/www/crypto-exchange/index.html';
 //var website = 'http://53274912.swh.strato-hosting.eu/nexdex/index.html';
 var url = window.location.href;
 var hash = url.substring(url.indexOf("#")+1);
