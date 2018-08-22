@@ -122,18 +122,32 @@ function drawChartNow() {
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Month', 'Coin (in USD)'],
-          ['January 2018',  0.01],
-          ['February 2018',  0.09],
-          ['March 2018',  0.35],
-          ['April 2018',  0.89],
-          ['May 2018',  1.74],
-          ['June 2018',  2.42],
-          ['July 2018',  4.01]
+          ['Month', 'AMIS (in USD)'],
+	  ['January 2017',  0.001],
+	  ['February 2017',  0.01],
+	  ['March 2017',  0.01],
+	  ['April 2017',  0.1],
+	  ['May 2017',  1.01],
+	  ['Jun 2017',  10.01],
+	  ['July 2017',  100.01],
+	  ['August 2017',  1000.01],
+	  ['September 2017',  10000.01],
+	  ['October 2017',  1000.01],
+	  ['November 2017',  1174.93],
+	  ['December 2017',  1174.93],
+	  ['January 2018',  1174.93],
+          ['January 2018',  1174.93],
+          ['February 2018',  4.93],
+          ['March 2018',  14.93],
+          ['April 2018',  1174.93],
+          ['May 2018',  1174.93],
+          ['June 2018',  1174.93],
+          ['July 2018',  1174.93],
+	  ['August 2018',  1174.93]
         ]);
 
         var options = {
-          title: 'Coin Performance in USD ($) Year to Date',
+          title: 'AMIS Coin Performance in USD ($) all time to Date',
           legend: { position: 'top' }
         };
 
